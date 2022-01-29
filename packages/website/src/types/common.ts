@@ -1,4 +1,48 @@
 // using camelcase api
+
+// enum subjectType {
+//   book = 1,
+//   anime = 2,
+//   music = 3,
+//   game = 4,
+//   reality = 6
+// }
+
+// enum personType {
+//   individual,
+//   company,
+//   combination
+// }
+
+// enum bloodType {
+//   A,
+//   B,
+//   CD,
+//   O
+// }
+
+// enum characterType {
+//   character,
+//   body,
+//   ship,
+//   organization
+// }
+
+// enum collectionType {
+//   want,
+//   watched,
+//   watching,
+//   shelved,
+//   abandon
+// }
+
+// enum epType {
+//   original,
+//   SP,
+//   OP,
+//   ED
+// }
+
 type infoBox = {
   key:string,
   value:string | {
@@ -62,7 +106,7 @@ export type CharacterDetail = {
   locked: boolean
   infobox: infoBox
   gender: string
-  blooType: number
+  bloodType: number
   birthYear: number
   birthMon: number
   birthDay: number
@@ -90,4 +134,25 @@ export type Subject = {
   rating: rating
   collection: collection
   tags: tag[]
+}
+
+export type PersonDetail = {
+  id: number
+  name: string
+  type: number
+  career: string
+  images: images
+  summary: string
+  locked: boolean
+  lastModified: string
+  infobox: infoBox
+  gender: string
+  bloodType: number
+  birthYear: number
+  birthMon: number
+  birthDay: number
+  stat: {
+    comments: number
+    collects: number
+  }
 }
