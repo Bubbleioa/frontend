@@ -16,12 +16,12 @@ describe('App', () => {
   it('should load character and subject', async () => {
     const { getByText } = render(<App />)
     const characterName = 'うずまきボルト'
-    await waitFor(() => getByText(characterName))
+    await waitFor(() => getByText(characterName), { timeout: 6000 })
 
     expect(getByText(characterName))
 
     const subjectName = 'BLACK WOLVES SAGA -Bloody Nightmare-'
-    await waitFor(() => getByText(subjectName))
+    await waitFor(() => getByText(subjectName), { timeout: 6000 })
     expect(getByText(subjectName)).toBeInTheDocument()
   })
 })
